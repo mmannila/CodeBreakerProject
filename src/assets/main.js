@@ -12,7 +12,9 @@ function guess() {
     if (!validateInput(input.value)) {
     	return false;
     }
-    attempt++;
+    else {
+    	attempt++;
+    }
     
     // updates message based on win/lose condition
     if (getResults(input)) {
@@ -22,11 +24,11 @@ function guess() {
     }
     else if (attempt >= 10) {
     	setMessage("You Lose! :(");
-    	showAnswer(false);
+    	showAnswer(true);
     	showReplay();
     }
     else
-    	setMessage("Incorrect! Try again.");
+    	setMessage("Incorrect, try again.");
 }
 
 function setHiddenFields() {
