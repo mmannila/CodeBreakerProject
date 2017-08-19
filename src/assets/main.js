@@ -13,7 +13,7 @@ function guess() {
     	return false;
     }
     else {
-    	attempt++;
+    	attempt += 1;
     }
     
     // updates message based on win/lose condition
@@ -24,7 +24,7 @@ function guess() {
     }
     else if (attempt >= 10) {
     	setMessage("You Lose! :(");
-    	showAnswer(true);
+    	showAnswer(false);
     	showReplay();
     }
     else
