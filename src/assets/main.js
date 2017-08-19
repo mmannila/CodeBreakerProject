@@ -13,8 +13,10 @@ function guess() {
     	return false;
     }
     else {
-    	attempt += 1;
+    	attempt.value = parseInt(attempt.value) + 1;
     }
+    
+    console.log(attempt.value);
     
     // updates message based on win/lose condition
     if (getResults(input)) {
@@ -22,7 +24,7 @@ function guess() {
     	showAnswer(true);
     	showReplay();
     }
-    else if (attempt >= 10) {
+    else if (attempt.value >= 10) {
     	setMessage("You Lose! :(");
     	showAnswer(false);
     	showReplay();
